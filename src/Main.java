@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class Main {
 
@@ -37,15 +36,10 @@ public class Main {
     public static final String WORD_TO_FIND = "na";
 
     public static void main(String[] args) {
-        JaroWinkler jaroWinkler = new JaroWinkler();
         String[] words = TEXT.toLowerCase().split(" ");
+        SearchThreadHelper searchThreadHelper = new SearchThreadHelper();
 
-//        for (int i = 0; i < words.length; i++) {
-//            System.out.println(i + ": " + words[i]);
-//        }
-
-        new Thread(new SearchThread(Arrays.copyOfRange(words, 0, words.length / 2), WORD_TO_FIND.toLowerCase())).start();
-        new Thread(new SearchThread(Arrays.copyOfRange(words, words.length / 2, words.length), WORD_TO_FIND.toLowerCase())).start();
+        searchThreadHelper.startNewThreads(words, WORD_TO_FIND, 4);
     }
 
 }

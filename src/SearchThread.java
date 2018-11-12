@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SearchThread implements Runnable {
 
     private final String[] words;
@@ -11,11 +13,12 @@ public class SearchThread implements Runnable {
     @Override
     public void run() {
         JaroWinkler jaroWinkler = new JaroWinkler();
-
+        System.out.println(Arrays.toString(words));
+        System.out.println("array size: " + words.length);
         for (int i = 0; i < words.length; i++) {
-            System.out.println(Thread.currentThread().getId() + ": " + words[i]);
+//            System.out.println(Thread.currentThread().getId() + ": " + words[i]);
             if (jaroWinkler.calculateSimilarity(words[i], wordToFind) == 1D) {
-                System.out.println("Index znalezionego słowa to: " + i);
+//                System.out.println("Index znalezionego słowa to: " + i);
             }
         }
     }
