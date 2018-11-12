@@ -6,9 +6,9 @@ public class SearchThreadHelper {
         int subArraySize = words.length / threadCount;
         int index = subArraySize + (words.length % threadCount);
 
-        new Thread(new SearchThread(Arrays.copyOfRange(words, 0, index), wordToFind.toLowerCase())).start();
+        new Thread(new SearchThread(0, Arrays.copyOfRange(words, 0, index), wordToFind.toLowerCase())).start();
         for (int i = 0; i < threadCount - 1; i++) {
-            new Thread(new SearchThread(Arrays.copyOfRange(words, index, index + subArraySize), wordToFind.toLowerCase())).start();
+            new Thread(new SearchThread(index, Arrays.copyOfRange(words, index, index + subArraySize), wordToFind.toLowerCase())).start();
             index += subArraySize;
         }
     }
