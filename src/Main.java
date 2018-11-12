@@ -38,12 +38,24 @@ public class Main {
         JaroWinkler jaroWinkler = new JaroWinkler();
         String[] words = TEXT.toLowerCase().split(" ");
 
+        writeWords(words);
+
+        long startTime = System.nanoTime();
+        search(words);
+        System.out.println("Czas działania: " + (System.nanoTime() - startTime) + " nanosekund");
+    }
+
+    private static void writeWords(String[] words) {
         for (int i = 0; i < words.length; i++) {
             System.out.println(i + ": " + words[i]);
         }
+    }
+
+    private static void search(String[] words) {
+        JaroWinkler jaroWinkler = new JaroWinkler();
 
         for (int i = 0; i < words.length; i++) {
-            if (jaroWinkler.calculateSimilarity(words[i], WORD_TO_FIND.toLowerCase()) == 1D) {
+            if (jaroWinkler.calculateSimilarity(words[i], WORD_TO_FIND) == 1D) {
                 System.out.println("Index znalezionego słowa to: " + i);
             }
         }
