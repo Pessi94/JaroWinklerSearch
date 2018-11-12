@@ -34,7 +34,7 @@ public class Main {
             "Śniło mu się, że nad czymś ogromnie się trudził. " +
             "Tak zmęczył się tym snem, że się obudził. ";
 
-    public static final String WORD_TO_FIND = "na".toLowerCase();
+    public static final String WORD_TO_FIND = "na";
 
     public static void main(String[] args) {
         JaroWinkler jaroWinkler = new JaroWinkler();
@@ -44,8 +44,8 @@ public class Main {
 //            System.out.println(i + ": " + words[i]);
 //        }
 
-        new Thread(new SearchThread(Arrays.copyOfRange(words, 0, words.length / 2), WORD_TO_FIND)).start();
-        new Thread(new SearchThread(Arrays.copyOfRange(words, words.length / 2, words.length), WORD_TO_FIND)).start();
+        new Thread(new SearchThread(Arrays.copyOfRange(words, 0, words.length / 2), WORD_TO_FIND.toLowerCase())).start();
+        new Thread(new SearchThread(Arrays.copyOfRange(words, words.length / 2, words.length), WORD_TO_FIND.toLowerCase())).start();
     }
 
 }
