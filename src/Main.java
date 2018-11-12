@@ -41,14 +41,14 @@ public class Main {
 
     public static void main(String[] args) {
         JaroWinkler jaroWinkler = new JaroWinkler();
-        String[] words = TEXT.split(" ");
+        String[] words = TEXT.toLowerCase().split(" ");
 
         for (int i = 0; i < words.length; i++) {
             System.out.println(i + ": " + words[i]);
         }
 
         for (int i = 0; i < words.length; i++) {
-            if (jaroWinkler.calculateSimilarity(words[i], WORD_TO_FIND) == 1D) {
+            if (jaroWinkler.calculateSimilarity(words[i], WORD_TO_FIND.toLowerCase()) == 1D) {
                 System.out.println("Index znalezionego słowa to: " + i);
             }
         }
