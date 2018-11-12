@@ -34,11 +34,11 @@ public class Main {
             "Śniło mu się, że nad czymś ogromnie się trudził. " +
             "Tak zmęczył się tym snem, że się obudził. ";
 
-    public static final String WORD_TO_FIND = "na";
+    public static final String WORD_TO_FIND = "na".toLowerCase();
 
     public static void main(String[] args) {
         JaroWinkler jaroWinkler = new JaroWinkler();
-        String[] words = TEXT.split(" ");
+        String[] words = TEXT.toLowerCase().split(" ");
 
 //        for (int i = 0; i < words.length; i++) {
 //            System.out.println(i + ": " + words[i]);
