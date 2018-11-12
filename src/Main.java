@@ -1,41 +1,36 @@
 public class Main {
 
     public static final String TEXT =
-            "Na tapczanie siedzi leń,\n" +
-            "Nic nie robi cały dzień.\n" +
-            "\n" +
-            "\"O, wypraszam to sobie!\n" +
-            "Jak to? Ja nic nie robię?\n" +
-            "A kto siedzi na tapczanie?\n" +
-            "A kto zjadł pierwsze śniadanie?\n" +
-            "A kto dzisiaj pluł i łapał?\n" +
-            "A kto się w głowę podrapał?\n" +
-            "A kto dziś zgubił kalosze?\n" +
-            "O - o! Proszę!\"\n" +
-            "\n" +
-            "Na tapczanie siedzi leń,\n" +
-            "Nic nie robi cały dzień.\n" +
-            "\n" +
-            "\"Przepraszam! A tranu nie piłem?\n" +
-            "A uszu dzisiaj nie myłem?\n" +
-            "A nie urwałem guzika?\n" +
-            "A nie pokazałem języka?\n" +
-            "A nie chodziłem się strzyc?\n" +
-            "To wszystko nazywa się nic?\"\n" +
-            "\n" +
-            "Na tapczanie siedzi leń,\n" +
-            "Nic nie robi cały dzień.\n" +
-            "\n" +
-            "Nie poszedł do szkoły, bo mu się nie chciało,\n" +
-            "Nie odrobił lekcji, bo czasu miał za mało,\n" +
-            "Nie zasznurował trzewików, bo nie miał ochoty,\n" +
-            "Nie powiedział \"dzień dobry\", bo z tym za dużo roboty,\n" +
-            "Nie napoił Azorka, bo za daleko jest woda,\n" +
-            "Nie nakarmił kanarka, bo czasu mu było szkoda.\n" +
-            "Miał zjeść kolację - tylko ustami mlasnął,\n" +
-            "Miał położyć się - nie zdążył - zasnął.\n" +
-            "Śniło mu się, że nad czymś ogromnie się trudził.\n" +
-            "Tak zmęczył się tym snem, że się obudził.";
+            "Na tapczanie siedzi leń, " +
+            "Nic nie robi cały dzień. " +
+            "\"O, wypraszam to sobie! " +
+            "Jak to? Ja nic nie robię? " +
+            "A kto siedzi na tapczanie? " +
+            "A kto zjadł pierwsze śniadanie? " +
+            "A kto dzisiaj pluł i łapał? " +
+            "A kto się w głowę podrapał? " +
+            "A kto dziś zgubił kalosze? " +
+            "O - o! Proszę!\" " +
+            "Na tapczanie siedzi leń, " +
+            "Nic nie robi cały dzień. " +
+            "\"Przepraszam! A tranu nie piłem? " +
+            "A uszu dzisiaj nie myłem? " +
+            "A nie urwałem guzika? " +
+            "A nie pokazałem języka? " +
+            "A nie chodziłem się strzyc? " +
+            "To wszystko nazywa się nic?\" " +
+            "Na tapczanie siedzi leń, " +
+            "Nic nie robi cały dzień. " +
+            "Nie poszedł do szkoły, bo mu się nie chciało, " +
+            "Nie odrobił lekcji, bo czasu miał za mało, " +
+            "Nie zasznurował trzewików, bo nie miał ochoty, " +
+            "Nie powiedział \"dzień dobry\", bo z tym za dużo roboty, " +
+            "Nie napoił Azorka, bo za daleko jest woda, " +
+            "Nie nakarmił kanarka, bo czasu mu było szkoda. " +
+            "Miał zjeść kolację - tylko ustami mlasnął, " +
+            "Miał położyć się - nie zdążył - zasnął. " +
+            "Śniło mu się, że nad czymś ogromnie się trudził. " +
+            "Tak zmęczył się tym snem, że się obudził. ";
 
     public static final String WORD_TO_FIND = "na";
 
