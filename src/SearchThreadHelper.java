@@ -3,12 +3,13 @@ import java.util.Arrays;
 public class SearchThreadHelper {
 
     public void startNewThreads(String[] words, String wordToFind, int threadCount) {
-        int startIndex = 0;
         int subArraySize = words.length / threadCount;
+        int index = subArraySize + (words.length % threadCount);
 
-        for (int i = 0; i < threadCount; i++) {
-            new Thread(new SearchThread(Arrays.copyOfRange(words, startIndex, startIndex + subArraySize), wordToFind.toLowerCase())).start();
-            startIndex += subArraySize;
+        new Thread(new SearchThread(Arrays.copyOfRange(words, 0, index), wordToFind.toLowerCase())).start();
+        for (int i = 0; i < threadCount - 1; i++) {
+            new Thread(new SearchThread(Arrays.copyOfRange(words, index, index + subArraySize), wordToFind.toLowerCase())).start();
+            index += subArraySize;
         }
     }
 
