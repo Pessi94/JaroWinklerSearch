@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static final String TEXT =
@@ -38,15 +40,12 @@ public class Main {
         JaroWinkler jaroWinkler = new JaroWinkler();
         String[] words = TEXT.split(" ");
 
-        for (int i = 0; i < words.length; i++) {
-            System.out.println(i + ": " + words[i]);
-        }
+//        for (int i = 0; i < words.length; i++) {
+//            System.out.println(i + ": " + words[i]);
+//        }
 
-        for (int i = 0; i < words.length; i++) {
-            if (jaroWinkler.calculateSimilarity(words[i], WORD_TO_FIND) == 1D) {
-                System.out.println("Index znalezionego słowa to: " + i);
-            }
-        }
+        new Thread(new SearchThread(Arrays.copyOfRange(words, 0, words.length / 2), WORD_TO_FIND)).start();
+        new Thread(new SearchThread(Arrays.copyOfRange(words, words.length / 2, words.length), WORD_TO_FIND)).start();
     }
 
 }
