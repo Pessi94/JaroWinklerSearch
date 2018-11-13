@@ -34,13 +34,19 @@ public class Main {
             "Tak zmęczył się tym snem, że się obudził. ";
 
     public static final String WORD_TO_FIND = "na";
-    public static final int THREADS_COUNT = 8;
+    public static final int THREADS_COUNT = 4;
 
     public static void main(String[] args) {
         String[] words = TEXT.toLowerCase().split(" ");
         SearchThreadHelper searchThreadHelper = new SearchThreadHelper();
 
-        searchThreadHelper.startNewThreads(words, WORD_TO_FIND, THREADS_COUNT);
+        try {
+            long startTime = System.nanoTime();
+            searchThreadHelper.startNewThreads(words, WORD_TO_FIND, THREADS_COUNT);
+            System.out.println("Czas działania: " + (System.nanoTime() - startTime) + " nanosekund");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
