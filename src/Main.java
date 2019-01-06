@@ -5,13 +5,12 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static final String WORD_TO_FIND = "na";
+    public static final String WORD_TO_FIND = "drukuje";
 
     public static void main(String[] args) {
-        JaroWinkler jaroWinkler = new JaroWinkler();
         String[] words = readWords();
 
-        writeWords(words);
+//        writeWords(words);
 
         long startTime = System.nanoTime();
         search(words);
@@ -36,7 +35,7 @@ public class Main {
 
     private static String[] readWords(){
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("words.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("words2.txt"));
             ArrayList<String> words = new ArrayList<>();
             String word;
 
